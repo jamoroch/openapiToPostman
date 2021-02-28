@@ -26,7 +26,7 @@ var postman_collection_writer = function (postman_filename) {
   }
 }
 
-function converter (spec_filename) { 
+function convert (spec_filename) { 
   var name_token = _.head(_.split(spec_filename, /.yaml$|.yml$/, 1));
   var postman_filename = name_token + '-postman-collection.json';
   
@@ -49,3 +49,17 @@ function converter (spec_filename) {
     process.exit(1);
   }
 }
+
+function convert_all(path_to_specs) {
+  fs.readdir(path_to_specs, function (err, files) { 
+
+    if (err) { 
+      console.error(err);
+      process.exit(1);
+    }
+    fs.Dir
+    files.forEach(f => convert(path_to_specs + f));
+  });
+}
+
+convert_all('files/');
