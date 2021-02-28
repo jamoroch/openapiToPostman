@@ -1,0 +1,16 @@
+{
+  "name": "oas2postman",
+  "version": "0.1.0",
+  "description": "conversion of swagger and openapi 3 specification to postman collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jamoroch",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.0.0",
+    "openapi-to-postmanv2": "^2.3.0",
+    "swagger2openapi": "^7.0.5"
+  }
+}
